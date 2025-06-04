@@ -10,7 +10,7 @@ from mlxtend.frequent_patterns import association_rules
 # Load rules
 @st.cache_data
 def load_rules():
-    with open("model/rules.pkl", "rb") as f:
+    with open("rules.pkl", "rb") as f:
         return pickle.load(f)
 
 rules = load_rules()
