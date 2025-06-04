@@ -15,7 +15,7 @@ frequent_itemsets = apriori(df_encoded, min_support=0.01, use_colnames=True)
 rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0.1)
 
 os.makedirs("model", exist_ok=True)
-with open("model/rules.pkl", "wb") as f:
+with open("rules.pkl", "wb") as f:
     pickle.dump(rules, f)
 
 print("✅ Rules generated and saved to model/rules.pkl")
